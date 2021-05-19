@@ -1,0 +1,1 @@
+IF(AND(NOT(EXISTS($trace.parent_id)),EXISTS($duration_ms),NOT(IN($client_id,20109))),AND(LTE($duration_ms,5000),LTE($app.status_code,400)))

@@ -1,0 +1,20 @@
+IF(
+	AND(
+		NOT(
+			EXISTS(
+				$trace.parent_id
+			)
+		),
+		EXISTS(
+			$duration_ms
+		),
+		EQUALS(
+			$service_name,
+			"myservicename"
+		)
+	),
+	LTE(
+		$duration_ms,
+		3000
+	)
+)

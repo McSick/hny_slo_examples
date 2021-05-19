@@ -1,0 +1,22 @@
+IF(
+	AND(
+		NOT(
+			EXISTS(
+				$trace.parent_id
+			)
+		),
+		EXISTS(
+			$duration_ms
+		),
+		NOT(
+			IN(
+				$client_id,
+				20109
+			)
+		)
+	),
+	LTE(
+		$duration_ms,
+		5000
+	)
+)

@@ -1,0 +1,1 @@
+IF(AND(EQUALS($status,"success"),EQUALS($repo,"git@github.com:myorg/myrepo.git"),OR(EQUALS($branch,"master"),EQUALS($branch,"main")),NOT(EXISTS($trace.parent_id))),LTE($duration_ms,900000))

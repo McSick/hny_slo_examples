@@ -1,0 +1,10 @@
+IF(
+	EQUALS(
+		$name,
+		"my/endpoint/name"
+	),
+	LTE(
+		$duration_ms,
+		10000
+	)
+)
