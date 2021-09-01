@@ -1,0 +1,1 @@
+IF(IN($name,"HTTP GET","HTTP POST"),CONCAT($name," ",REG_VALUE($http.url,'/[a-zA-Z]+(?!.*[a-zA-Z]+)/gi')),$name)
