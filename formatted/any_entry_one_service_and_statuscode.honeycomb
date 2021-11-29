@@ -16,7 +16,7 @@ IF(
 			"myService"
 		)
 	),
-	OR(
+	AND(
 		LT(
 			$app.status_code,
 			400
