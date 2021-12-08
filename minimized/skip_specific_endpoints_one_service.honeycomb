@@ -1,0 +1,1 @@
+IF(AND(NOT(EXISTS($trace.parent_id)), EXISTS($duration_ms), EQUALS($service.name, "myapiservice"), NOT(EQUALS($http.target, "/")), NOT(EQUALS($http.target, "/healthz"))), LTE($duration_ms, 1000))
