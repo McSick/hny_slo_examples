@@ -11,11 +11,11 @@ IF(
 		),
 		EQUALS(
 			$project,
-			"xyz.fe"
+			"abc.fe"
 		),
 		EQUALS(
 			$operation,
-			"xyz.Frontend/PutBatch"
+			"abc.Frontend/PutBatch"
 		)
 	),
 	LTE(

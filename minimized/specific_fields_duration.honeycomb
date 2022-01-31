@@ -1,1 +1,1 @@
-IF(AND(EXISTS($duration_ms),EXISTS($project),EXISTS($operation),EQUALS($project,"xyz.fe"),EQUALS($operation,"xyz.Frontend/PutBatch")),LTE($duration_ms,875))
+IF(AND(EXISTS($duration_ms),EXISTS($project),EXISTS($operation),EQUALS($project,"abc.fe"),EQUALS($operation,"xyz.Frontend/PutBatch")),LTE($duration_ms,875))

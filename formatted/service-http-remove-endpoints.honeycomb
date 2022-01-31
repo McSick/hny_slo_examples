@@ -5,12 +5,12 @@ IF(
 		),
 		EQUALS(
 			$service_name,
-			"XYZ_BACKEND"
+			"ABC_BACKEND"
 		),
 		NOT(
 			CONTAINS(
 				$request.route,
-				"/xyz/v2/projects"
+				"/abc/v2/projects"
 			)
 		),
 		NOT(
