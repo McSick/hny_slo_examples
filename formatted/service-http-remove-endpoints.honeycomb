@@ -1,0 +1,36 @@
+IF(
+	AND(
+		EXISTS(
+			$duration_ms
+		),
+		EQUALS(
+			$service_name,
+			"ABC_BACKEND"
+		),
+		NOT(
+			CONTAINS(
+				$request.route,
+				"/abc/v2/projects"
+			)
+		),
+		NOT(
+			CONTAINS(
+				$request.route,
+				"health_check"
+			)
+		),
+		EXISTS(
+			$response.status_code
+		)
+	),
+	AND(
+		LT(
+			$response.status_code,
+			400
+		),
+		LTE(
+			$duration_ms,
+			1000
+		)
+	)
+)
